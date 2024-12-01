@@ -14,7 +14,7 @@
             <property name="jakarta.persistence.jdbc.user" value="root"/>
             <property name="jakarta.persistence.jdbc.password" value="root"/>
             
-            <property name="jakarta.persistence.schema-generation.database.action" value="none"/>  <!-- create вместо none чтобы пыталось создать бд при запуске  -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>  <!-- create вместо none чтобы пыталось создать бд при запуске  -->
 
 
             <property name="hibernate.show_sql" value="true" />

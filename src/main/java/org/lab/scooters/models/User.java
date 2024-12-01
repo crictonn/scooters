@@ -6,14 +6,16 @@ import lombok.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@RequiredArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
+@Builder
 @Entity
 @Table(name = "clients")
+@AllArgsConstructor
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
     private String firstName;
@@ -36,4 +38,5 @@ public class User {
         scooters.remove(scooter);
         scooter.getUsers().remove(this);
     }
+
 }
